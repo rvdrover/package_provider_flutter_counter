@@ -3,15 +3,15 @@ import 'package:provider/provider.dart';
 
 class CounterProvider extends ChangeNotifier{
 
-   int _count = 0;
+   int count = 0;
 
   void increment() {
-    _count++;
+    count++;
     notifyListeners();
   }
 
   void dicrement() {
-    _count--;
+    count--;
     notifyListeners();
   }
 
