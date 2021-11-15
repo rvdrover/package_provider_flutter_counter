@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:package_provider_flutter_counter/providers/counter_provider.dart';
+import 'package:provider/provider.dart';
 
 import 'home.dart';
 
@@ -11,13 +13,15 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter State',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
+    return ChangeNotifierProvider(
+      create: (BuildContext context) => CounterProvider(),
+      child: MaterialApp(
+        title: 'Flutter State',
+        theme: ThemeData(
+          primarySwatch: Colors.blue,
+        ),
+        home: const MyHomePage(title: 'Flutter Package Redux Counter'),
       ),
-      home: const MyHomePage(title: 'Flutter Package Redux Counter'),
-      
     );
   }
 }
