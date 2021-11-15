@@ -18,7 +18,7 @@ class MyHomePage extends StatelessWidget {
       body: Consumer<CounterProvider>(builder: (context, notifier, child) {
         return Center(
           child: Text(
-            "$notifier.count",
+            "${notifier.count}",
             style: const TextStyle(
               fontSize: 60,
               fontWeight: FontWeight.bold,
