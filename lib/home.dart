@@ -38,7 +38,7 @@ class MyHomePage extends StatelessWidget {
             width: 20,
           ),
           FloatingActionButton(
-            onPressed: () => counterProvider.dicrement(),
+            onPressed: () => counterProvider.decrement(),
             tooltip: 'Decrement',
             child: const Icon(Icons.remove),
           )
